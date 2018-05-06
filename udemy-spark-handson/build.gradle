@@ -1,0 +1,7 @@
+dependencies {
+    // compile fileTree(dir: ‘lib’, include: ‘*.jar’)
+    
+    compile name: "dstream-twitter_2.11-0.1.0-SNAPSHOT"
+    compile name: "twitter4j-core-4.0.4"
+    compile name: "twitter4j-stream-4.0.4"
+}
