@@ -1,5 +1,7 @@
 import java.nio.charset.CodingErrorAction
 
+import commons.Constants
+
 import scala.io.{Codec, Source}
 
 /**
@@ -11,7 +13,7 @@ package object section6 {
     codec.onMalformedInput(CodingErrorAction.REPLACE)
     codec.onUnmappableCharacter(CodingErrorAction.REPLACE)
 
-    Source.fromFile("./UdemySparkCourse/src/main/resources/data/ml/u.item")
+    Source.fromFile(s"${Constants.resourcesRootPath}/data/ml/u.item")
       .getLines()
       .map(_.split("\\|"))
       .filter(_.length > 1)
