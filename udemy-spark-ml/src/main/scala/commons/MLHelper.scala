@@ -108,6 +108,10 @@ object MLHelper {
     }
   }
 
+  def extractFeatures(ds: DataFrame, cols: Array[String]): DataFrame = {
+    new VectorAssembler().setInputCols(cols).setOutputCol("features").transform(ds).select("features")
+  }
+
   def prepareMLSession(session: Session, fd: FeatureData, ts: TransformSteps, finalStage: PipelineStage): MLSession = {
     println("Original dataset model:")
     session.df.printSchema()
