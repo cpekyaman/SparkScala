@@ -1,9 +1,10 @@
 package section09
 
-import commons.SparkHelper
+import commons.Constants
+import udemy.spark.commons.SparkHelper
 
 object DataFrameOperations extends App {
-  val session = SparkHelper.startSessionWithDF("DFOperations", "data/CitiGroup2006_2008")
+  val session = SparkHelper.startSessionWithDF("DFOperations", Constants.resourcesRootPath,"data/CitiGroup2006_2008")
 
   import org.apache.spark.sql.functions._
   import session.spark.implicits._

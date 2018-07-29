@@ -1,10 +1,11 @@
 package section09
 
-import commons.SparkHelper
+import commons.Constants
 import org.apache.spark.sql.DataFrame
+import udemy.spark.commons.SparkHelper
 
 object DateTimeOperations extends App {
-  val session = SparkHelper.startSessionWithDF("DFDateTime", "data/CitiGroup2006_2008")
+  val session = SparkHelper.startSessionWithDF("DFDateTime", Constants.resourcesRootPath,"data/CitiGroup2006_2008")
 
   import org.apache.spark.sql.functions._
   import session.spark.implicits._

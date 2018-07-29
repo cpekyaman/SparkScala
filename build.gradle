@@ -53,4 +53,10 @@ subprojects {
     }
 }
 
+configure(subprojects.findAll {it.name != 'udemy-spark-commons'}) {
+    dependencies {
+        compile project(":udemy-spark-commons")
+    }
+}
+
 

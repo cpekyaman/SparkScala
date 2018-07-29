@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="compileOrder" value="JavaThenScala" />
-    <profile name="Gradle 1" modules="udemy-spark-handson,udemy-spark-ml">
+    <profile name="Gradle 1" modules="udemy-spark-bigdata,udemy-spark-commons,udemy-spark-handson,udemy-spark-ml">
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
       <parameters>

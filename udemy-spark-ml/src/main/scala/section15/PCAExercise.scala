@@ -1,10 +1,11 @@
 package section15
 
-import commons.{MLHelper, SparkHelper}
+import commons.Constants
 import org.apache.spark.ml.feature.{PCA, StandardScaler}
+import udemy.spark.commons.{MLHelper, SparkHelper}
 
 object PCAExercise extends App {
-  private val session = SparkHelper.startSessionWithDF("PCAExercise", "ml/pca/Cancer_Data")
+  private val session = SparkHelper.startSessionWithDF("PCAExercise", Constants.resourcesRootPath,"ml/pca/Cancer_Data")
 
   val featureColumnNames = Array("mean radius", "mean texture", "mean perimeter", "mean area", "mean smoothness",
     "mean compactness", "mean concavity", "mean concave points", "mean symmetry", "mean fractal dimension",

@@ -1,9 +1,11 @@
 package section09
 
-import commons.SparkHelper
+import commons.Constants
+import udemy.spark.commons.SparkHelper
+
 
 object Exercises extends App {
-  val session = SparkHelper.startSessionWithDF("DFExercises", "data/Netflix_2011_2016.csv")
+  val session = SparkHelper.startSessionWithDF("DFExercises", Constants.resourcesRootPath,"data/Netflix_2011_2016.csv")
 
   import session.spark.implicits._
   import org.apache.spark.sql.functions._

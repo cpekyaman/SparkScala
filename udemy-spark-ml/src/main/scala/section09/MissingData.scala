@@ -1,9 +1,10 @@
 package section09
 
-import commons.SparkHelper
+import commons.Constants
+import udemy.spark.commons.SparkHelper
 
 object MissingData extends App {
-  val session = SparkHelper.startSessionWithDF("DFMissingData", "data/ContainsNull.csv")
+  val session = SparkHelper.startSessionWithDF("DFMissingData", Constants.resourcesRootPath,"data/ContainsNull.csv")
 
   println("dropping nulls")
   session.df.na.drop().show()

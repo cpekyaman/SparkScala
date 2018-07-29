@@ -1,12 +1,14 @@
 package section13
 
-import commons.{Constants, LibsvmLoader, SparkHelper}
+import commons.Constants
 import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.ml.regression.LinearRegression
 import org.apache.spark.ml.tuning.{ParamGridBuilder, TrainValidationSplit}
+import udemy.spark.commons.{LibsvmLoader, SparkHelper}
 
 object ModelEvaluationOverview extends App {
-  private val session = SparkHelper.startSessionWithDF("ModelEvaluationOV", Constants.lregLibsvmSampleDataPath, LibsvmLoader)
+  private val session = SparkHelper.startSessionWithDF("ModelEvaluationOV",
+    Constants.resourcesRootPath, Constants.lregLibsvmSampleDataPath, LibsvmLoader)
 
   val Array(training, test) = session.df.randomSplit(Array(0.9, 0.1), seed = 12345)
 

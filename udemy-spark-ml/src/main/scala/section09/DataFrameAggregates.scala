@@ -1,9 +1,10 @@
 package section09
 
-import commons.SparkHelper
+import commons.Constants
+import udemy.spark.commons.SparkHelper
 
 object DataFrameAggregates extends App {
-  val session = SparkHelper.startSessionWithDF("DFAggregates", "data/Sales.csv")
+  val session = SparkHelper.startSessionWithDF("DFAggregates", Constants.resourcesRootPath,"data/Sales.csv")
   session.df.show()
 
   println("Group by company")

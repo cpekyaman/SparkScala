@@ -1,4 +1,6 @@
 rootProject.name = 'spark-scala'
 
+include 'udemy-spark-commons'
 include 'udemy-spark-handson'
 include 'udemy-spark-ml'
+include 'udemy-spark-bigdata'

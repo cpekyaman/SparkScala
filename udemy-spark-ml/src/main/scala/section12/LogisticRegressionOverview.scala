@@ -1,10 +1,11 @@
 package section12
 
-import commons.{LibsvmLoader, MLHelper, SparkHelper}
+import commons.Constants
 import org.apache.spark.ml.classification.LogisticRegression
+import udemy.spark.commons.{LibsvmLoader, MLHelper, SparkHelper}
 
 object LogisticRegressionOverview extends App {
-  private val session = SparkHelper.startSessionWithDF("LogisticRegression", "ml/classification/sample_libsvm_data.txt", LibsvmLoader)
+  private val session = SparkHelper.startSessionWithDF("LogisticRegression", Constants.resourcesRootPath,"ml/classification/sample_libsvm_data.txt", LibsvmLoader)
 
   val lr = new LogisticRegression()
     .setMaxIter(10)
